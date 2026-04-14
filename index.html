@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Coding Company | webinar Registration</title>
+    <style>
+        /* CSS Variables for a 'The Minimal Closet' inspired palette */
+        :root {
+            --bg-color: #f8f8f8;
+            --text-dark: #1a1a1a;
+            --glass-bg: rgba(255, 255, 255, 0.2);
+            --accent: #333;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%); /* Soft gradient for glass pop */
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-dark);
+        }
+
+        /* The Glass Container */
+        .form-container {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+            margin: 20px;
+        }
+
+        h1 {
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            outline: none;
+            font-size: 14px;
+            transition: 0.3s;
+            box-sizing: border-box;
+        }
+
+        input:focus, select:focus {
+            background: rgba(255, 255, 255, 0.8);
+            border-color: var(--accent);
+        }
+
+        .hidden { display: none; }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: var(--text-dark);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #444;
+            transform: translateY(-2px);
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h1>The Coding Company</h1>
+    <form id="registrationForm" action="https://script.google.com/macros/s/AKfycbyq51vLyPccDy3DTTAyJKdYMb5HR9vbgSVnolQwcUo-G9AzG_ukNnkdCpZK3Hn8FZ0-Fw/exec" method="POST">
+        
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" name="fullName" placeholder="John Doe" required>
+        </div>
+
+        <div class="form-group">
+            <label>College Name</label>
+            <input type="text" name="collegeName" placeholder="Your University" required>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" name="phoneNumber" placeholder="+91 00000 00000" required>
+            </div>
+            <div class="form-group">
+                <label>Email ID</label>
+                <input type="email" name="emailID" placeholder="hello@company.com" required>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label>Year of College</label>
+                <select name="yearOfCollege" required>
+                    <option value="" disabled selected>Select Year</option>
+                    <option>1st Year</option>
+                    <option>2nd Year</option>
+                    <option>3rd Year</option>
+                    <option>4th Year</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>State / UT</label>
+                <select name="stateUT" required>
+                    <option value="" disabled selected>Select State</option>
+                    <option>Andhra Pradesh</option><option>Arunachal Pradesh</option><option>Assam</option><option>Bihar</option><option>Chhattisgarh</option><option>Goa</option><option>Gujarat</option><option>Haryana</option><option>Himachal Pradesh</option><option>Jharkhand</option><option>Karnataka</option><option>Kerala</option><option>Madhya Pradesh</option><option>Maharashtra</option><option>Manipur</option><option>Meghalaya</option><option>Mizoram</option><option>Nagaland</option><option>Odisha</option><option>Punjab</option><option>Rajasthan</option><option>Sikkim</option><option>Tamil Nadu</option><option>Telangana</option><option>Tripura</option><option>Uttar Pradesh</option><option>Uttarakhand</option><option>West Bengal</option>
+                    <option>Andaman & Nicobar</option><option>Chandigarh</option><option>Dadra & Nagar Haveli</option><option>Daman & Diu</option><option>Delhi</option><option>Jammu & Kashmir</option><option>Ladakh</option><option>Lakshadweep</option><option>Puducherry</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Branch of Study</label>
+            <select name="branchOfStudy" required>
+                <option value="" disabled selected>Select Branch</option>
+                <optgroup label="Engineering">
+                    <option>Computer Science (CSE)</option>
+                    <option>Electronics & Comm (ECE)</option>
+                    <option>Electrical (EEE)</option>
+                    <option>Mechanical (ME)</option>
+                    <option>Civil (CE)</option>
+                    <option>Information Technology (IT)</option>
+                    <option>AI & Machine Learning</option>
+                    <option>Data Science</option>
+                    <option>Biotechnology</option>
+                </optgroup>
+                <optgroup label="Pharma">
+                    <option>B.Pharm</option>
+                    <option>D.Pharm</option>
+                    <option>Pharma.D</option>
+                    <option>Pharmaceutical Analysis</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <label>Preferred Language</label>
+                <select name="preferredLanguage" required>
+                    <option value="" disabled selected>Select Language</option>
+                    <option>English</option><option>Hindi</option><option>Bengali</option><option>Telugu</option><option>Marathi</option><option>Tamil</option><option>Gujarati</option><option>Urdu</option><option>Kannada</option><option>Odia</option><option>Malayalam</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Select Domain (Course)</label>
+                <select name="selectDomain" required>
+                    <option value="" disabled selected>Choose Course</option>
+                    <optgroup label="Technical">
+                        <option>Full Stack Web Dev</option><option>Data Structures & Algos</option><option>Python for AI</option><option>Cybersecurity</option><option>Cloud Computing (AWS/Azure)</option><option>Android App Dev</option><option>Blockchain Tech</option><option>UI/UX Design</option><option>Embedded Systems</option><option>Robotics</option>
+                    </optgroup>
+                    <optgroup label="Non-Technical">
+                        <option>Digital Marketing</option><option>Product Management</option><option>Business Analytics</option><option>Content Strategy</option><option>Finance for Engineers</option><option>Entrepreneurship</option><option>Soft Skills & HR</option><option>Project Management</option><option>SEO Marketing</option><option>Public Speaking</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Hard Copy Certificate?</label>
+            <select id="hardCopy" name="hardCopyCertificate" onchange="toggleAddress()" required>
+                <option value="no">No, Digital only</option>
+                <option value="yes">Yes, I want a hard copy</option>
+            </select>
+        </div>
+
+        <div id="addressSection" class="form-group hidden">
+            <label>Delivery Address</label>
+            <textarea name="deliveryAddress" placeholder="House No, Street, City, Pincode" rows="3"></textarea>
+        </div>
+
+        <button type="submit">Submit Registration</button>
+    </form>
+</div>
+
+<script>
+    function toggleAddress() {
+        const selection = document.getElementById('hardCopy').value;
+        const addressField = document.getElementById('addressSection');
+        if (selection === 'yes') {
+            addressField.classList.remove('hidden');
+        } else {
+            addressField.classList.add('hidden');
+        }
+    }
+
+    // Handle form submission with AJAX to avoid page redirect
+    document.getElementById('registrationForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent default form submission
+
+        const formData = new FormData(this);
+        const button = this.querySelector('button');
+        const originalText = button.textContent;
+        button.textContent = 'Submitting...';
+        button.disabled = true;
+
+        fetch(this.action, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            // Check if response is ok
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.text(); // Read as text first
+        })
+        .then(text => {
+            try {
+                // Try to parse as JSON
+                const data = JSON.parse(text);
+                if (data.status === 'success') {
+                    alert('Registration submitted successfully!');
+                    document.getElementById('registrationForm').reset();
+                } else {
+                    alert('Error: ' + (data.message || 'Unknown error'));
+                }
+            } catch (e) {
+                // If not JSON, check if request was processed
+                if (text.includes('success') || text.includes('Data submitted')) {
+                    alert('Registration submitted successfully!');
+                    document.getElementById('registrationForm').reset();
+                } else {
+                    alert('Registration submitted! (Status: Process completed)');
+                    document.getElementById('registrationForm').reset();
+                }
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Submission failed: ' + error.message + '. Please check your internet connection and try again.');
+        })
+        .finally(() => {
+            button.textContent = originalText;
+            button.disabled = false;
+        });
+    });
+</script>
+
+</body>
+</html>
